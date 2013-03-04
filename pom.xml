@@ -3,16 +3,15 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>se.uu.doar</groupId>
 	<artifactId>jmxprobe</artifactId>
-	<version>1.0</version>
+	<version>1.1-SNAPSHOT</version>
 	<name>jmxprobe</name>
 	<properties>
 		<my.shortname>jmxprobe</my.shortname>
 	</properties>
 	<scm>
-		<connection>scm:svn:http://ignore.nothing.com/repos/fake</connection>
-		<developerConnection>scm:svn:http://subversion.its.uu.se/repos/DoAr/htclient/trunk</developerConnection>
-		<tag>HEAD</tag>
-		<url>http://subversion.its.uu.se/repos/DoAr/htserver/trunk</url>
+		<connection>scm:svn:https://svn.liss.nu/svn/projects/jmxprobe/trunk</connection>
+		<developerConnection>scm:svn:https://svn.liss.nu/svn/projects/jmxprobe/trunk</developerConnection>
+		<url>https://svn.liss.nu/svn/projects/jmxprobe/trunk</url>
 	</scm>
 	<dependencies>
 		<dependency>
@@ -119,4 +118,18 @@
 			<url>http://onejar-maven-plugin.googlecode.com/svn/mavenrepo</url>
 		</pluginRepository>
 	</pluginRepositories>
+	<build>
+	  <plugins>
+	    <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-release-plugin</artifactId>
+              <configuration>
+		<tagBase>
+		  https://svn.liss.nu/svn/projects/jmxprobe/tags
+		</tagBase>
+		<autoVersionSubmodules>true</autoVersionSubmodules>
+              </configuration>
+	    </plugin>
+	  </plugins>
+	</build>
 </project>
