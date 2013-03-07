@@ -172,11 +172,13 @@ public class JMXProbe {
 
 			/****** Runtime info ******/
 			// Nothing here used at the moment
+			/*
 			RuntimeMXBean proxy = 
 				ManagementFactory.newPlatformMXBeanProxy(connection,
 						ManagementFactory.RUNTIME_MXBEAN_NAME,
 						RuntimeMXBean.class);
 			String vendor = proxy.getVmVendor();
+			*/
 			/****** Done with runtime info ******/
 
 			/****** Memory pool info ******/
